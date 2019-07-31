@@ -1,4 +1,13 @@
 /*
+    webfont
+*/
+
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/*
     Style the paragraphs: use a Serif font, increase the spacing a little,
     use a basic size that makes it easy to read.
     Give the text a dark color, but not black.
@@ -40,6 +49,7 @@ a:hover, a:visited {
 body {
     max-width: 90%;
     margin: auto;
+    font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -200,3 +210,20 @@ footer {
     margin-top: 80px;
 }
 
+
+/*
+    Notification box
+ */
+
+.notification {
+    background: -webkit-radial-gradient(rgb(255, 255, 255), rgb(112, 130, 146));
+    background: radial-gradient(rgb(255, 255, 255), rgb(112, 130, 146));
+    padding:.5rem 1rem;
+    border:3px solid #DDDDCC;
+    width:250px;
+    font-weight:bold;
+    color: #333300;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
