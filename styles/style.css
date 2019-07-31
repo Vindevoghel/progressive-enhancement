@@ -1,64 +1,159 @@
+/*
+    Style the paragraphs: use a Serif font, increase the spacing a little,
+    use a basic size that makes it easy to read.
+    Give the text a dark color, but not black.
+ */
+
+p {
+    font-family: FreeSerif;
+    letter-spacing: .005em;
+    font-size: large;
+    color: #1a1c1c;
+}
+
+
+/*
+    Style links so that they are easily readable.
+*/
+
+a {
+    color: black;
+    font-weight: bolder;
+}
+
+
+/*
+    Style the "hover" and "visited" state of the links.
+*/
+
+a:hover, a:visited {
+    color: #646464;
+    font-weight: bold;
+}
+
+
+/*
+    Give the body a maximum width of 90%.
+    Then, center the body by playing with the margin property
+*/
+
 body {
     max-width: 90%;
     margin: auto;
-    background: -webkit-linear-gradient(125deg, rgb(163, 163, 163), rgb(100, 107, 115));
-    background: linear-gradient(125deg, rgb(163, 163, 163), rgb(100, 107, 115));
 }
 
-p  {
-    font-family: "Droid Serif";
-    font-size: 1.1em;
-    letter-spacing: .1em;
-    color: darkslategrey;
-}
 
-a   {
-    font-size: 1.1em;
-    color: lightgrey;
-}
-
-a:hover {
-    color: lightblue;
-}
-
-a:visited, a:link {
-    color: lightgrey;
-}
+/*
+    Make sure that the quotes are only half the pages width
+    Using only the margin property, place the quotes in the middle.
+*/
 
 .story {
     width: 50%;
-    margin: 80px auto 80px auto;
+    margin: auto;
+}
+
+
+/*
+    Increase the text size in quotations to 160% of the default text size
+    Give a slightly greyish colour to the background of the quotations
+    Add a 3px brick border to the left of each quotation
+    The text of the quotations touches the border, it's not pretty. Add a 30px space between the border and the text of the quotation.
+*/
+
+q {
     font-size: 160%;
-    background-color: lightgrey;
+    background-color: #ececec;
     border-left: 3px solid firebrick;
     padding-left: 30px;
 }
 
-q. {
+
+/*
+    Make sure that the quotes have an empty space of 80 pixels above and below.
+*/
+
+.story {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+
+/*
+    Find out how to add a background color to your body
+*/
+
+/*body {
+    background-color: lightgrey;
+}*/
+
+
+/*
+    Change the background color to use a color gradient (go to http://www.colinkeany.com/blend/)
+*/
+
+body {
+    background: -webkit-radial-gradient(rgb(255, 255, 255), rgb(112, 130, 146));
+    background: radial-gradient(rgb(255, 255, 255), rgb(112, 130, 146));
+}
+
+
+/*
+    Add a background image to your body
+    Make sure that the image does not repeat itself
+    Change its positioning to bottom right
+    Changes its size to cover
+    Now keep the background you like the most
+*/
+
+/*body {
+    background-image: url("images/rice.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: cover;
+}*/
+
+
+/*
+    Using only the tag as a selector, italicize all quotations.
+*/
+
+q {
     font-style: italic;
 }
 
-q.farmer {
-    border-left: 3px solid blue;
+/*
+    Identify the quotes of the villagers and the farmer by assigning each a corresponding class.
+    Change the color of the left edge of the quotes according to the person speaking.
+ */
+
+.farmer {
+    border-color: #ff00d7;
 }
 
-q.villagers {
-    border-left: 3px solid green;
+.villagers {
+    border-color: #00bca8;
 }
 
-header p {
-    background-color: greenyellow;
-}
 
-.bad, .good {
+/*
+    Italics the text of the quotations
+    Capitalize all instances of the words "good" and "bad".
+    Put the words "Bad" in red
+    Put the words "Good" in green
+    Style the table so that the background color of each row is alternating grey or white
+    Put the first paragraph in bold
+*/
+
+.good, .bad {
     text-transform: capitalize;
 }
 
-strong.bad {
+.bad {
     color: red;
 }
 
-strong.good {
+.good {
     color: green;
 }
 
@@ -74,10 +169,25 @@ p:first-of-type {
     font-weight: bold;
 }
 
+/*
+    Make the text run around the images, using the float property on the images (adjusted with margin to distance the text from the image).
+ */
+
 img {
     float: left;
-    margin-right: 80px;
-    width: 200px;
+    max-width: 300px;
     height: auto;
-    display: inline-block;
+    margin-right: 40px;
 }
+
+/* Floats table next to conclusion */
+
+#table {
+    float: left;
+    margin-right: 30px;
+}
+
+footer {
+    margin-top: 80px;
+}
+
