@@ -137,6 +137,15 @@ q {
 
 
 /*
+    Select an element of the header and gives it a yellow background (use the child selector)
+*/
+
+header > p {
+    background-color: greenyellow;
+}
+
+
+/*
     Italics the text of the quotations
     Capitalize all instances of the words "good" and "bad".
     Put the words "Bad" in red
